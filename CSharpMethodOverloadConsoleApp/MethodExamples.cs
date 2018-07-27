@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 
 namespace MethodExamples
 {
-    class mathOperations
+    class ExampleMethods
     {
         public void partyTime(int yourMoney, out int leftOverMoney)
         {

@@ -20,8 +20,8 @@ namespace MethodExamples
     {
         static void Main(string[] args)
         {
-            mathOperations math = new mathOperations();
-            Console.Write("You're friend decided to go out to the bar, how many dollars did they have in their wallet? ");
+            ExampleMethods math = new ExampleMethods();
+            Console.Write("Your friend decided to go out to the bar, how many dollars did they have in their wallet? ");
             int yourMoney = Convert.ToInt32(Console.ReadLine());
             int leftOverMoney;
 
