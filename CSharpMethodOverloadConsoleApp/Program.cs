@@ -17,12 +17,12 @@ namespace MethodExamples
     {
         static void Main(string[] args)
         {
-            ExampleMethods math = new ExampleMethods();
+            ExampleMethods exampleMethods = new ExampleMethods();
             Console.Write("Your friend decided to go out to the bar, how many dollars did they have in their wallet? ");
             int yourMoney = Convert.ToInt32(Console.ReadLine());
             int leftOverMoney;
 
-            math.partyTime(yourMoney, out leftOverMoney);
+            exampleMethods.PartyTime(yourMoney, out leftOverMoney);
 
             Console.WriteLine("Surprise! It was a rough night for your friend, all they have left is ${0}!", leftOverMoney);
             Console.WriteLine("They were going to take you out for lunch, but.....");
@@ -33,11 +33,30 @@ namespace MethodExamples
             int hikingTime = Convert.ToInt32(Console.ReadLine());
 
             // Static Class and Method
-            Console.WriteLine("Congratulations! Your happiness level has increased to {0}!", goneHiking.yourHappiness(hikingTime));
+            Console.WriteLine("Congratulations! Your happiness level has increased to {0}!", GoneHiking.yourHappiness(hikingTime));
             Console.WriteLine("Press enter to exit!");
             Console.ReadLine();
 
+            // Overloaded Method Example
+            Console.WriteLine("Lastly we'll determine how many miles you hiked!");
+            Console.WriteLine("To show an example of overloaded methods, I'll also convert your traveled distance into kilometers!");
+            Console.WriteLine();
+            Console.Write("What was your average hiking speed in miles per hour? ");
+            int milesTraveled = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("How many hours did you hike? ");
+            int hoursTraveled = Convert.ToInt32(Console.ReadLine());
+            Console.ReadLine();
+            
+            exampleMethods.DistanceCalc(hoursTraveled, milesTraveled, out double milesPerHr);
+            exampleMethods.DistanceCalc( milesPerHr, out double kilometersPerHr);
 
+            // To add injury to insult I used {0} for both of my placeholders and thought that my values were not being transferred correctly!
+           // Tried rewriting a bit of the code and had it all click.... Dork! Have a nice day!
+
+            Console.WriteLine("Wow you hiked {0} miles, that would equal {1} kilometers!!!", milesPerHr, kilometersPerHr);
+            Console.WriteLine("Thank you for demoing my program, press enter to exit.");
+            Console.ReadLine();
         }
 
     }
