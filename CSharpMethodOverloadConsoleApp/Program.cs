@@ -34,8 +34,7 @@ namespace MethodExamples
 
             // Static Class and Method
             Console.WriteLine("Congratulations! Your happiness level has increased to {0}!", GoneHiking.yourHappiness(hikingTime));
-            Console.WriteLine("Press enter to exit!");
-            Console.ReadLine();
+            Console.WriteLine();
 
             // Overloaded Method Example
             Console.WriteLine("Lastly we'll determine how many miles you hiked!");
@@ -46,7 +45,7 @@ namespace MethodExamples
             Console.WriteLine();
             Console.Write("How many hours did you hike? ");
             int hoursTraveled = Convert.ToInt32(Console.ReadLine());
-            Console.ReadLine();
+            Console.WriteLine();
             
             exampleMethods.DistanceCalc(hoursTraveled, milesTraveled, out double milesPerHr);
             exampleMethods.DistanceCalc( milesPerHr, out double kilometersPerHr);
